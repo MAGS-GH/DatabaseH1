@@ -62,5 +62,6 @@ WHERE height > 170 or averageGrade > 7
 ORDER BY id DESC
 LIMIT 2;
 
--- @block
+-- @block Vi laver et index på vores email
 CREATE INDEX email_index ON student(email)
+
