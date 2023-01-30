@@ -9,9 +9,9 @@
             "port": 3306,
             "driver": "MySQL",
             "name": "DBH1",
-            "database": "H1DB",
+            "database": "dbh1",
             "username": "root",
-            "password": "DatabaseH1"
+            "password": "DBH1"
         }
     ]
 }

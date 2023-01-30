@@ -65,3 +65,24 @@ LIMIT 2;
 -- @block Vi laver et index på vores email
 CREATE INDEX email_index ON student(email)
 
+-- @block
+CREATE TABLE courses (
+    courses_id INT NOT NULL PRIMARY KEY,
+    name VARCHAR(255)
+);
+
+-- @block 
+INSERT INTO courses (courses_id, name)
+VALUES (
+    1,
+    "Database H1"
+);
+-- @block
+SELECT * FROM courses;
+
+
+-- @block
+ALTER TABLE student
+ADD CONSTRAINT FK_courses
+FOREIGN KEY (courses_id) REFERENCES courses(id);
+    
