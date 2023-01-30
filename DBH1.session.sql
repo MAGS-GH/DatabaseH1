@@ -33,12 +33,12 @@ SELECT * FROM student;
 SELECT email, id FROM student
 LIMIT 2;
 
--- @block
+-- @block ORDER BY
 SELECT email, id FROM student
 ORDER BY id DESC
 LIMIT 2;
 
--- @block
+-- @block Where
 SELECT email, id FROM student
 
 WHERE height > 170
@@ -46,7 +46,7 @@ WHERE height > 170
 ORDER BY id DESC
 LIMIT 2;
 
--- @block
+-- @block and
 SELECT email, id FROM student
 
 WHERE height > 170 and averageGrade > 7
@@ -54,7 +54,7 @@ WHERE height > 170 and averageGrade > 7
 ORDER BY id DESC
 LIMIT 2;
 
--- @block
+-- @block or 
 SELECT email, id FROM student
 
 WHERE height > 170 or averageGrade > 7
