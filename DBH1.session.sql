@@ -54,7 +54,7 @@ WHERE height > 170 and averageGrade > 7
 ORDER BY id DESC
 LIMIT 2;
 
--- @block or 
+-- @block or
 SELECT email, id FROM student
 
 WHERE height > 170 or averageGrade > 7
