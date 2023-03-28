@@ -11,7 +11,7 @@
             "name": "DBH1",
             "database": "dbh1",
             "username": "root",
-            "password": "DBH1"
+            "password": "password"
         }
     ]
 }
