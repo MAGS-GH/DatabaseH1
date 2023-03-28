@@ -1,9 +1,10 @@
+
 -- @block
 SHOW DATABASES;
 
 -- @block delete the student table
-DROP TABLE IF EXISTS student;
--- @block
+DROP TABLE IF EXISTS Student;
+-- @block Create a table with 4 attributes
 CREATE TABLE Student (
     id INT PRIMARY KEY AUTO_INCREMENT,
     email VARCHAR(255) NOT NULL UNIQUE,
@@ -11,7 +12,7 @@ CREATE TABLE Student (
     averageGrade FLOAT
 );
 
--- @block 
+-- @block Insert one student
 INSERT INTO Student (email, height, averageGrade)
 VALUES (
     'Anders@edu.com',
@@ -19,21 +20,21 @@ VALUES (
     5.4
 );
 
--- @block 
+-- @block Insert multiple students
 INSERT INTO Student (email, height, averageGrade)
 VALUES ('Karsten@edu.com', 180.3, 9.6),
        ('Trine@edu.com', 167.5, 11),
-       ('Signe@edu.com', 163, 3.4);
+       ('Signe@edu.com', 163, 3.4)
 
 
--- @block
+-- @block Show all "*" from the student table
 SELECT * FROM student;
 
--- @block
+-- @block Select only email and id from the student table
 SELECT email, id FROM student
 LIMIT 2;
 
--- @block ORDER BY
+-- @block ORDER BY 
 SELECT email, id FROM student
 ORDER BY id DESC
 LIMIT 2;
@@ -62,7 +63,7 @@ WHERE height > 170 or averageGrade > 7
 ORDER BY id DESC
 LIMIT 2;
 
--- @block Vi laver et index på vores email
+-- @block Creating an index on our student email - what is an index? 
 CREATE INDEX email_index ON student(email)
 
 -- @block
